@@ -1,3 +1,47 @@
-h1 {
-	color: blue;
+@charset "UTF-8";
+
+header {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-align: center;
+}
+
+header.blog-title {
+    font-size: 30px;
+}
+
+footer {
+    display: inline;
+    text-align: center;
+
+}
+
+.content {
+    font-family: 'Quicksand', sans-serif;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    margin: auto;
+
+}
+
+.content #contact-us-form {
+    text-align: center;
+    vertical-align: middle;
+    margin-left:50px;
+   margin-right:50px;
+}
+
+a:hover:not(.active) {
+ background-color: transparent;
+ color: #4c4c4c;
+}
+
+.section {
+    padding: 10px;
+    font-size: 50px;
+}
+
+#homepage ul, #homepage li, #about-us-ul, #about-us-li {
+    text-align: center;
+    list-style-type: none;
 }

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" href="/static/css/normalize.css" type="text/css">
+        <link rel="stylesheet" href="/static/css/skeleton.css" type="text/css">
+        <script src="/static/js/script.js"></script>
+		<title>Contact Us</title>
+	</head>
+
+	<body>
+
+		<header>
+        <h1> Want to get in touch? </h1>
+		</header>
+
+        <div id="alert">
+        </div>
+        <div id="success">
+            <ul>
+                {% for notification in notifications %}
+                <li>{{ notification }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="content" id="homepage">
+            <div class="row">
+                <div class="one-half column"><ul><li><a href="/index">Home</a></li></ul></div>
+                <div class="one-half column"><ul><li><a href="/about">About Us</a></li></ul></div>
+            </div>
+        </div>
+
+        <form onsubmit="addAlertToTop()" action="/contact" method="POST" id="contact-form">
+            <div class="content" id="contact-us-form">
+                <div class="row" >
+                    <div class="six columns" >
+                        <label for="name">Name</label>
+                        <input class="u-full-width" type="text" name="name">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="six columns" >
+                        <label for="subject">Subject</label>
+                        <input class="u-full-width" type="text" name="subject">
+                    </div>
+                  </div>
+
+                <div class="row">
+                    <div class="six columns">
+                        <label for="subject">Message</label>
+                        <input class="u-full-width" type="text" name="message">
+                    </div>
+                </div>
+                <input class="button-primary" type="submit" name="submit" id="submit" value="submit">
+            </div>
+        </form>
+
+        <div class="content">
+            <div class="row">
+            <footer id="footer">
+                <div class="one-half column"><p>Posted by: Muying Chen </p></div>
+                <div class="one-half column"><p>Contact information: <a href="mailto:muyingchen@berkeley.edu">muyingchen@berkeley.edu</a></p></div>
+            </footer></div>
+        </div>
+	</body>
+</html>
